@@ -20,9 +20,15 @@ A simple table that lists the products of a store can have the following the col
 
 In addition to these four columns, we add another column named id or product_id, all values in the product_id column are unique and can be used to identify an individual row. In a proper relational database, we would have 2 more columns for our customers and to keep track of orders. The relations between these 3 tables can be visualized as such:
 
-$$
-\text{Customer} \xrightarrow{1:1} \text{Order} \xrightarrow{1:n} \text{Product}
-$$
+```mermaid
+graph LR
+    C[Customer] -- places --> O[Single Order]
+    O -- contains --> P1[Product A]
+    O -- contains --> P2[Product B]
+    O -- contains --> Pn[Product ...]
+
+    style O fill:#f9f,stroke:#333,stroke-width:2pt
+```
 
 ## Relational Database Management Systems
 
@@ -32,5 +38,9 @@ An RDBMS is a software that allows you to interact with the underlying hardware 
 
 The most important tool in an RDBMS is SQL, the programming language for relational databases. Different database vendors have different syntax for SQL but the core features of the language remain same all across.
 
-![[rdbms_flow.webp]]
+```mermaid
+graph LR
+    A[RDBMS] -- manages --> B[(Relational Database)]
+    B -- stores --> C[Tables]
+```
 
