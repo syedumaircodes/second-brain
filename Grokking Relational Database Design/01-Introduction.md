@@ -20,10 +20,17 @@ A simple table that lists the products of a store can have the following the col
 
 In addition to these four columns, we add another column named id or product_id, all values in the product_id column are unique and can be used to identify an individual row. In a proper relational database, we would have 2 more columns for our customers and to keep track of orders. The relations between these 3 tables can be visualized as such:
 
-Customer --> Can buy one or multiple products --> in a single order.
+$$
+\text{Customer} \xrightarrow{1:1} \text{Order} \xrightarrow{1:n} \text{Product}
+$$
 
 ## Relational Database Management Systems
 
 A relational database management system is a tool to manage relational databases, the first RDBMS was devloped by Edgar Codd at IBM in 1970
 
 An RDBMS is a software that allows you to interact with the underlying hardware and operating system to physically store and manage data in relational databases using tools that it provides to create, modify, and query databases along with security controls.
+
+The most important tool in an RDBMS is SQL, the programming language for relational databases. Different database vendors have different syntax for SQL but the core features of the language remain same all across.
+
+![[rdbms_flow.webp]]
+
