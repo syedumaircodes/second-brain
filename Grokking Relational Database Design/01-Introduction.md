@@ -26,8 +26,6 @@ graph LR
     O -- contains --> P1[Product A]
     O -- contains --> P2[Product B]
     O -- contains --> Pn[Product ...]
-
-    style O fill:#f9f,stroke:#333,stroke-width:2pt
 ```
 
 ## Relational Database Management Systems
